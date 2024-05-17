@@ -71,15 +71,14 @@ class MainActivity : AppCompatActivity() {
 
     private val inputListener = object : InputListener {
         override fun onMapTap(p0: Map, p1: Point) {
-            setMark(p1)
+            mark(p1)
         }
 
         override fun onMapLongTap(p0: Map, p1: Point) {
-            setMark(p1)
         }
     }
     //обработка нажатия
-    fun setMark(point: Point) {
+    fun mark(point: Point) {
         mapCollection.addPlacemark(point)
     }
 
